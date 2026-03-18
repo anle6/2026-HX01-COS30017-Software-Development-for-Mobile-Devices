@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CarRentalApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/supercar_red</item>
+        <item name="colorSecondary">@color/supercar_accent_gold</item>
+        <item name="android:statusBarColor">@color/supercar_dark_gray</item>
+    </style>
+
+    <style name="Theme.CarRentalApp" parent="Base.Theme.CarRentalApp" />
+</resources>
