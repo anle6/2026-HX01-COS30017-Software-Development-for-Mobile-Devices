@@ -23,6 +23,19 @@
             android:layout_height="match_parent"
             android:background="#60000000" />
 
+        <Button
+            android:id="@+id/btnCancelRent"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:text="CANCEL RENT"
+            android:textColor="@color/white"
+            android:backgroundTint="#80FF0000"
+            android:visibility="gone" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

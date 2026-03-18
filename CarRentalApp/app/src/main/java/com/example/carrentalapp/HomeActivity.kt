@@ -117,6 +117,12 @@ class HomeActivity : AppCompatActivity() {
     private fun refreshNavHeader() {
         val headerView = navView.getHeaderView(0)
         headerView.findViewById<TextView>(R.id.navHeaderBalance).text = "Balance: ${CarData.creditBalance} Credits"
+        
+        headerView.findViewById<ImageButton>(R.id.btnAddCredits).setOnClickListener {
+            CarData.addCredits(100)
+            Toast.makeText(this, "Added 100 Credits!", Toast.LENGTH_SHORT).show()
+            refreshUI()
+        }
     }
 
     private fun setupSearchAndSort() {

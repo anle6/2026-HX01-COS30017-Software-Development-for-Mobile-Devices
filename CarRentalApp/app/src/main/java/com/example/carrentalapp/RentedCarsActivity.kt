@@ -4,10 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -78,6 +80,14 @@ class RentedCarsActivity : AppCompatActivity() {
                 itemView.findViewById<TextView>(R.id.previewName).text = car.name
                 itemView.findViewById<TextView>(R.id.previewModel).text = car.model
                 
+                val btnCancel = itemView.findViewById<Button>(R.id.btnCancelRent)
+                btnCancel.visibility = View.VISIBLE
+                btnCancel.setOnClickListener {
+                    CarData.cancelRental(car.id)
+                    Toast.makeText(this, "Rental cancelled and refunded!", Toast.LENGTH_SHORT).show()
+                    refreshUI()
+                }
+
                 itemView.setOnClickListener {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.putExtra("CAR_ID", car.id)

@@ -59,13 +59,35 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_rent_car_price"
+        android:id="@+id/tv_rent_days_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rental Duration: 1 Day"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_rent_car_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_rent_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1.0"
+        android:valueTo="7.0"
+        android:stepSize="1.0"
+        android:value="1.0"
+        app:layout_constraintTop_toBottomOf="@id/tv_rent_days_label" />
+
+    <TextView
+        android:id="@+id/tv_rent_total_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textSize="18sp"
-        tools:text="Cost: $50 / day"
-        app:layout_constraintTop_toBottomOf="@id/tv_rent_car_title"
+        android:textStyle="bold"
+        android:textColor="@color/supercar_red"
+        tools:text="Total Cost: 150 Credits"
+        app:layout_constraintTop_toBottomOf="@id/slider_rent_days"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
@@ -74,7 +96,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/tv_rent_car_price" />
+        app:layout_constraintTop_toBottomOf="@id/tv_rent_total_cost" />
 
     <TextView
         android:id="@+id/userBalanceLabel"
@@ -92,7 +114,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:text="$1000.00"
+        tools:text="500 Credits"
         app:layout_constraintBaseline_toBaselineOf="@id/userBalanceLabel"
         app:layout_constraintStart_toEndOf="@id/userBalanceLabel"
         android:layout_marginStart="8dp" />

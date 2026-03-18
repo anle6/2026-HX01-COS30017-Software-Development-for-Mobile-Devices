@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:background="@color/supercar_dark_gray"
@@ -24,11 +25,27 @@
         android:textStyle="bold"
         android:textColor="@color/white" />
 
-    <TextView
-        android:id="@+id/navHeaderBalance"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Balance: 500 Credits"
-        android:textColor="@color/supercar_accent_gold" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/navHeaderBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Balance: 500 Credits"
+            android:textColor="@color/supercar_accent_gold" />
+
+        <ImageButton
+            android:id="@+id/btnAddCredits"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="@color/supercar_red" />
+    </LinearLayout>
 
 </LinearLayout>
