@@ -42,6 +42,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test.txt"
+            file.createNewFile()
+    file.writeText("Hello External Storage")
+
+    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test1.txt"
+    txtInfor.txt= file.readText()
+
     private suspend fun thread1(): String {
         Log.d("T1", "Start Thread 1")
         delay(1700)
