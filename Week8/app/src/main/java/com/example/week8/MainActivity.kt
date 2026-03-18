@@ -42,12 +42,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test.txt"
+    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test.txt")
             file.createNewFile()
     file.writeText("Hello External Storage")
 
-    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test1.txt"
+    val file = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test1.txt")
     txtInfor.txt= file.readText()
+
+    val file_b = File(Enviroment.getExternalStorageDirectory)(), "/Documents/test2.txt").exists()
+
+
 
     private suspend fun thread1(): String {
         Log.d("T1", "Start Thread 1")
