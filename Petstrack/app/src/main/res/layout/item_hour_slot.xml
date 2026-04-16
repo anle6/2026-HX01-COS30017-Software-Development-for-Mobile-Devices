@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvHour"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="00:00"
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:background="#F5F5F5"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE" />
+
+    <LinearLayout
+        android:id="@+id/noteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:background="@android:color/white">
+        
+        <!-- Notes will be added here dynamically or just one TextView for simplicity -->
+        <TextView
+            android:id="@+id/tvNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#800080"
+            android:padding="4dp"
+            android:background="#F3E5F5"
+            android:visibility="gone"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="#EEEEEE" />
+    </LinearLayout>
+
+</LinearLayout>

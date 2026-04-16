@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "528552842006",
+    "project_id": "petstrack-47afb",
+    "storage_bucket": "petstrack-47afb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528552842006:android:4a2e84ae3e189932437637",
+        "android_client_info": {
+          "package_name": "com.example.petstrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBtt_Ru22NB7N2Tsoa0g7zbEVSqvuPXSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
